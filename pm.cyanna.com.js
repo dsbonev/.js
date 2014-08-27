@@ -28,7 +28,7 @@ $(document).ready(function () {
       .appendTo($('#attributes .splitcontentleft').first())
       .on('click', function () {
         $('#issue_status_id').val(9); // QA/Deployment
-        $('#issue_assigned_to_id').val(31) // Daniel
+        $('#issue_assigned_to_id').val(105) // me
         $('#issue_done_ratio').val(90); // 90%
       });
   }

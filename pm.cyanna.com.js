@@ -27,8 +27,8 @@ $(document).ready(function () {
     $('<button type=button id=finish_task_attributes>Finish task</button>')
       .appendTo($('#attributes .splitcontentleft').first())
       .on('click', function () {
-        $('#issue_status_id').val(9); // QA/Deployment
-        $('#issue_assigned_to_id').val(105) // me
+        $('#issue_status_id').val(27); // Code Review
+        $('#issue_assigned_to_id').val(149) // Astea
         $('#issue_done_ratio').val(90); // 90%
       });
   }

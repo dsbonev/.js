@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   if (document.body.classList.contains("controller-issues") &&
       document.body.classList.contains("action-show")) {
-        
+
     // add github PR create link
     $('<a id=open_pr href=#>PR</a>')
       .prependTo($('.issue.details .author'))
@@ -32,9 +32,9 @@ $(document).ready(function () {
         $('#issue_assigned_to_id').val(149) // Astea
         $('#issue_done_ratio').val(90); // 90%
       });
-      
+
     // turn PR url into clickable link
-    var PR_url_el = $('.issue.details .attributes tr:nth-last-child(2) td:last-child')
+    var PR_url_el = $('.issue.details .attributes td').filter(function (index, el) { return el.textContent.contains('github.com/cyanna/edvera/pull/') })
     PR_url_el.html('<a href="' + PR_url_el.text() + '">' + PR_url_el.text() + '</a>')
   }
 

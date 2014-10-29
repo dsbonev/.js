@@ -12,7 +12,7 @@ $(document).ready(function () {
         e.stopPropagation()
         var loc = document.location
         var issue_number = loc.pathname.match(/\d+/)[0]
-        var issue_title = $('#content h2').text().trim() + ' ' + $('.issue .subject h3').text().trim()
+        var issue_title = $('#content h2:first').text().trim() + ' ' + $('.issue .subject h3').text().trim()
         var issue_url = [loc.protocol, '//', loc.host, loc.pathname].join('')
         var queryString = 'create_pr=true&pr_title=' + encodeURIComponent(issue_title) + '&pr_body=' + encodeURIComponent(issue_url)
         var url = [
